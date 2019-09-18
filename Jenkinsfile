@@ -8,7 +8,7 @@ node {
 
 
     stage('Build') {
-            sh 'faas template pull node8-express'
+            sh 'faas template store pull node8-express'
             sh 'faas-cli build -f openfaas-*.yml '
 
     }
