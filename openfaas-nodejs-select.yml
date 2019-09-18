@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://211.251.237.70:14000
+functions:
+  openfaas-nodejs-select:
+    lang: node8-express
+    handler: ./openfaas-nodejs-select
+    image: 211.251.237.70:28089/of/openfaas-nodejs-select:latest
+    secrets:
+    - openfaas-harbor
