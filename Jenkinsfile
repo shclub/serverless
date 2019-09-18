@@ -21,6 +21,7 @@ node {
 
     stage('Deploy') {
 
+            sh 'faas login -u admin --password 68941ce7466cc347242975eff2c371ea71d8a6d2 -g http://211.251.237.70:14000'
             sh 'faas-cli deploy -f openfaas-*.yml '
 
     }
